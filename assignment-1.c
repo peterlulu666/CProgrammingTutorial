@@ -37,20 +37,23 @@ int main(void) {
     printf("name is remainder, value is %d, size in byte is %lu \n", remainder, sizeof(remainder));
     // A double precision variable greaterValue that is 2.8 if isGreaterThan is true and e if isGreaterThan is false
     double greaterValue = (isGreaterThan) ? 2.8 : e;
+    // %f is the format specifier for double
     printf("name is greaterValue, value is %f, size in byte is %lu \n", greaterValue, sizeof(greaterValue));
     // A single precision floating point constant oneTenth initialized to the ratio of 1.0 divided by 10.0
-
+    const float oneTenth = 1.0f / 10.0f;
+    // %f is the format specifier for floating point number
+    printf("name is oneTenth, value is %f, size in byte is %lu \n", oneTenth, sizeof(oneTenth));
     // A character hex7A whose value is the hexadecimal constant 7A.
+    const char hexadecimal = '\x7A';
+    // %c is the format specifier for character
+    printf("name is hexadecimal, value is %c, size in byte is %lu \n", hexadecimal, sizeof(hexadecimal));
     // A character constant charZ initialized to 'Z'.
+    const char charZ = 'Z';
+    // %c is the format specifier for character
+    printf("name is charZ, value is %c, size in byte is %lu \n", charZ, sizeof(charZ));
     // An unsigned short variable numLetters that is the number of letters between 'A' and 'Z' inclusive
-
-
-
-
-
-
-
-
+    unsigned short numLetters = ('Z' - 'A') + 1;
+    printf("name is numLetters, value is %c, size in byte is %lu \n", numLetters, sizeof(numLetters));
 
 
 }
