@@ -53,7 +53,8 @@ int main(void) {
     printf("name is charZ, value is %c, size in byte is %lu \n", charZ, sizeof(charZ));
     // An unsigned short variable numLetters that is the number of letters between 'A' and 'Z' inclusive
     unsigned short numLetters = ('Z' - 'A') + 1;
-    printf("name is numLetters, value is %c, size in byte is %lu \n", numLetters, sizeof(numLetters));
+    // %u is the format specifier for unsigned short
+    printf("name is numLetters, value is %u, size in byte is %lu \n", numLetters, sizeof(numLetters));
 
 
 }
