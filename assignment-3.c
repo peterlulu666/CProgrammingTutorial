@@ -80,6 +80,11 @@ void testInitArray() {
 
 }
 
+/**
+ * wordCount
+ * @param str the input string
+ * @return the number of words in the input string
+ */
 int wordCount(char str[]) {
     int countSpace = 0;
     int countWord = 0;
@@ -90,11 +95,37 @@ int wordCount(char str[]) {
 
     }
     countWord = countSpace + 1;
+
+//    int i = 0;
+//    while (true) {
+//        if (str[i] == '\0') {
+//            break;
+//        }
+//        if (str[i] == ' ') {
+//            i++;
+//        } else if ((str[i] != ' ') && ((str[i + 1] == ' '))) {
+//            //count word if a character is followed by space
+//            countWord++;
+//            i++;
+//        } else if ((str[i] != ' ') && (str[i + 1] == '\0')) {
+//            //count last word if it reaches terminator (\0)
+//            countWord++;
+//            i++;
+//        } else {
+//            //catch exception and still increment i
+//            //avoid infinite loop
+//            i++;
+//        }
+//    }
     return countWord;
 
 
 }
 
+/**
+ * testWordCount
+ * Does Test wordCount function
+ */
 void testWordCount() {
     char words0[] = "";
     printf("\"%s\" length: %lu word count: %d \n", words0, strlen(words0), wordCount(words0));
