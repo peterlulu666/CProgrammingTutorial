@@ -6,9 +6,16 @@ void initArray(unsigned int size, int array[], int element);
 
 void testInitArray();
 
+int wordCount(char str[]);
+
+void testWordCount();
+
 int main() {
     // Test initArray function
     testInitArray();
+    // Test wordCount function
+    testWordCount();
+
 
 }
 
@@ -44,6 +51,10 @@ void initArray(unsigned int size, int array[], int element) {
     printf("} \n");
 }
 
+/**
+ * testInitArray
+ * Does Test initArray function
+ */
 void testInitArray() {
     // Calling the function with arrays of size 0
     int n = 0;
@@ -65,6 +76,34 @@ void testInitArray() {
     int a6[n];
     value = 14;
     initArray(n, a6, value);
+
+
+}
+
+int wordCount(char str[]) {
+    int countSpace = 0;
+    int countWord = 0;
+    for (int i = 0; i < strlen(str); ++i) {
+        if (str[i] == ' ') {
+            countSpace++;
+        }
+
+    }
+    countWord = countSpace + 1;
+    return countWord;
+
+
+}
+
+void testWordCount() {
+    char words0[] = "";
+    printf("\"%s\" length: %lu word count: %d \n", words0, strlen(words0), wordCount(words0));
+    char words3[] = {"the"};
+    printf("\"%s\" length: %lu word count: %d \n", words3, strlen(words3), wordCount(words3));
+    char words9[] = {"two words"};
+    printf("\"%s\" length: %lu word count: %d \n", words9, strlen(words9), wordCount(words9));
+    char words19[] = {"the quick brown fox"};
+    printf("\"%s\" length: %lu word count: %d \n", words19, strlen(words19), wordCount(words19));
 
 
 }
