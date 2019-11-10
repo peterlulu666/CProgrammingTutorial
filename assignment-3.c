@@ -2,6 +2,16 @@
 #include <stdbool.h>
 #include <string.h>
 
+void initArray(unsigned int size, int array[], int element);
+
+void testInitArray();
+
+int main() {
+    // Test initArray function
+    testInitArray();
+
+}
+
 /**
  * initArray
  * @param size size of array
@@ -34,7 +44,7 @@ void initArray(unsigned int size, int array[], int element) {
     printf("} \n");
 }
 
-int main() {
+void testInitArray() {
     // Calling the function with arrays of size 0
     int n = 0;
     int a0[n];
@@ -54,7 +64,8 @@ int main() {
     n = 6;
     int a6[n];
     value = 14;
-    initArray(n, a3, value);
+    initArray(n, a6, value);
 
 
 }
+
