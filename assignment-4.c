@@ -18,7 +18,8 @@ void initBoard(char board[3][3]) {
 }
 
 /**
- * displayBoard displays the tic-tac-toe board with vertical and horizontal grid lines formed with dashes and vertical bars, using the characters in the 3x3 board array
+ * displayBoard displays the tic-tac-toe board with vertical and
+ * horizontal grid lines formed with dashes and vertical bars, using the characters in the 3x3 board array
  * @param board
  */
 void displayBoard(char board[3][3]) {
@@ -49,7 +50,8 @@ void markTheBoard(char board[3][3], char mark, int position) {
  * hasWon
  * @param board
  * @param mark
- * @return true if the marker character of the player passed in as won the game by examining the values in the 3x3 board array
+ * @return true if the marker character of the player passed in as won the game by examining
+ * the values in the 3x3 board array
  */
 bool hasWon(char board[3][3], char mark) {
     for (int i = 0; i < 3; ++i) {
