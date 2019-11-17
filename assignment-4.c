@@ -2,13 +2,16 @@
 #include <stdbool.h>
 #include <string.h>
 
+const int ROW = 3;
+const int COLUMN = 3;
+
 /**
  * initBoard initializes the 3x3 board array to space characters representing unmarked positions
  * @param board
  */
-void initBoard(char board[3][3]) {
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; ++j) {
+void initBoard(char board[ROW][COLUMN]) {
+    for (int i = 0; i < ROW; ++i) {
+        for (int j = 0; j < COLUMN; ++j) {
             board[i][j] = ' ';
 
         }
@@ -22,9 +25,9 @@ void initBoard(char board[3][3]) {
  * horizontal grid lines formed with dashes and vertical bars, using the characters in the 3x3 board array
  * @param board
  */
-void displayBoard(char board[3][3]) {
+void displayBoard(char board[ROW][COLUMN]) {
     printf("-------------");
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < ROW; ++i) {
         printf("| %c | %c | %c |\n", board[i][0], board[i][1], board[i][2]);
         printf("-------------");
 
@@ -39,9 +42,9 @@ void displayBoard(char board[3][3]) {
  * @param position
  * @return
  */
-void markTheBoard(char board[3][3], char mark, int position) {
-    int row = (position - 1) % 3;
-    int column = position - row * 3 - 1;
+void markTheBoard(char board[ROW][COLUMN], char mark, int position) {
+    int row = (position - 1) % ROW;
+    int column = position - row * COLUMN - 1;
     board[row][column] = mark;
 
 }
@@ -53,14 +56,16 @@ void markTheBoard(char board[3][3], char mark, int position) {
  * @return true if the marker character of the player passed in as won the game by examining
  * the values in the 3x3 board array
  */
-bool hasWon(char board[3][3], char mark) {
-    for (int i = 0; i < 3; ++i) {
-        // horizontal
+bool hasWon(char board[ROW][COLUMN], char mark) {
+    // horizontal
+    for (int i = 0; i < ROW; ++i) {
         if (board[i][0] == mark && board[i][1] == mark && board[i][2] == mark) {
             return true;
 
         }
-        // vertical
+    }
+    // vertical
+    for (int i = 0; i < COLUMN; ++i) {
         if (board[0][i] == mark && board[1][i] == mark && board[2][i] == mark) {
             return true;
 
@@ -79,7 +84,6 @@ bool hasWon(char board[3][3], char mark) {
     }
     return false;
 
-
 }
 
 /**
@@ -87,9 +91,9 @@ bool hasWon(char board[3][3], char mark) {
  * @param board
  * @return true if the board is currently a tie
  */
-bool isTie(char board[3][3]) {
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; ++j) {
+bool isTie(char board[ROW][COLUMN]) {
+    for (int i = 0; i < ROW; ++i) {
+        for (int j = 0; j < COLUMN; ++j) {
             if (board[i][j] == ' ') {
                 return false;
 

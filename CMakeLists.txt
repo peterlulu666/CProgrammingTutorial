@@ -3,4 +3,4 @@ project(CProgrammingTutorial C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(CProgrammingTutorial assignment-4.c)
+add_executable(CProgrammingTutorial zoo.c)
