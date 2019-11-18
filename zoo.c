@@ -60,6 +60,9 @@ unsigned int addAnimal(Zoo aZoo, Animal anAnimal) {
  * @return strings for the Animal names
  */
 const char *getAnimalName(Animal anAnimal) {
+    // Static variables inside functions are initialized only once and retains their current state
+    // between function calls. They are similar to global variables,
+    // but static variables are only visible inside the function they are defined.
     static const char *animalNames[] = {
             "anteater",
             "bear",
