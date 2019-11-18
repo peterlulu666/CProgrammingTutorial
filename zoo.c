@@ -97,9 +97,9 @@ const char *getAnimalName(Animal anAnimal) {
  * followed by a tab character ('\t') followed by the name of the animal
  */
 void printZoo(const Zoo aZoo) {
-    for (Animal i = anteater; i < zebra + 1; ++i) {
-        int count = aZoo[i];
-        printf("%3u \t %s \n", count, getAnimalName(i));
+    for (Animal anAnimal = anteater; anAnimal < zebra + 1; ++anAnimal) {
+        int count = aZoo[anAnimal];
+        printf("%3u \t %s \n", count, getAnimalName(anAnimal));
 
     }
 
@@ -116,7 +116,7 @@ int main(void) {
     Zoo aZoo;
     makeZoo(aZoo);
     for (Animal anAnimal = anteater; anAnimal < zebra + 1; ++anAnimal) {
-        for (int j = 0; j < anAnimal; ++j) {
+        for (int i = 0; i < anAnimal; ++i) {
             printf("Added %s count: %u\n", getAnimalName(anAnimal), addAnimal(aZoo, anAnimal));
 
         }
