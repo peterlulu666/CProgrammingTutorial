@@ -63,6 +63,12 @@ const char *getAnimalName(Animal anAnimal) {
     // Static variables inside functions are initialized only once and retains their current state
     // between function calls. They are similar to global variables,
     // but static variables are only visible inside the function they are defined.
+    // Features:
+    // Initialized until first function invocation.
+    // Lifetime: Entire program runtime, just like global variables, they are destroyed when the program execution ends.
+    // Once initialized, keeps their state during function calls.
+    // Stored in the program's and process' data segment.
+    // Variables inside of functions annotated with "static" keyword are like global variables inside functions.
     static const char *animalNames[] = {
             "anteater",
             "bear",
