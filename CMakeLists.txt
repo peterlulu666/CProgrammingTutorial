@@ -3,4 +3,4 @@ project(CProgrammingTutorial C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(CProgrammingTutorial PlayingCard.c)
+add_executable(CProgrammingTutorial assignment-6.c)
